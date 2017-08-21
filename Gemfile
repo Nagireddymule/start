@@ -10,12 +10,18 @@ end
 gem 'rails', '~> 5.1.3'
 
 #group :production do
-#gem 'pg'
+#gem 'pg','-> 0.19.0' 
 #end
 
-#group :development do
-gem 'sqlite3'
-#end
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -58,3 +64,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'bootstrap-sass', '~>2.3.1.0'

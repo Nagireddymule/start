@@ -9,12 +9,17 @@
   </head>
 
   <body>
-<%= link_to "home",root_path %> 
-<%= link_to "about",welcome_about_path %>
-<%= link_to "contact",welcome_contact_path %>
-<%= link_to "features",welcome_features_path %>
-<%= link_to "login",welcome_login_path %>
-<%= link_to "Invoices",invoices_path %> 
+
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li><%= link_to "home",root_path %></li> 
+    <li><%= link_to "about",welcome_about_path %></li>
+    <li><%= link_to "contact",welcome_contact_path %></li>
+    <li><%= link_to "features",welcome_features_path %></li>
+    <li><%= link_to "login",welcome_login_path %></li>
+    <li><%= link_to "Invoices",invoices_path %></li>
+  </ul>
     <%= yield %>
-  </body>
+</div> 
+ </body>
 </html>
