@@ -1,12 +1,10 @@
 class InvoicesController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_invoice, only: [:show, :edit, :update, :destroy]
 
   # GET /invoices
   # GET /invoices.json
   def index
-    @search = InvoiceSearch.new(params[:search])
-    @invoices = @search.scope
+    @invoices = Invoice.all
   end
 
   # GET /invoices/1
