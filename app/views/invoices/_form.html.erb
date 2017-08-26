@@ -40,7 +40,13 @@
       <%= f.text_field :salesperson, id: :invoice_salesperson %>
     </div>  
   </div>
-
+ 
+  <div class="control-group">
+    <%= f.label "status", class: 'control-label' %>
+    <div class="controls">
+      <%= f.select(:status_type, options_for_select([['PAID','PAID'],['PENDING','PENDING'],['CANCEL','CANCEL']])) %><!-- in two paid and two pendings are writing as 1.is database and 2. is user seeing thats purpose on writing two times-->
+    </div>
+  </div>
   <div class="control-group">
     <div class="controls">
       <%= f.submit 'submit', class: 'btn btn-default'%>
