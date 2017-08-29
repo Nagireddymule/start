@@ -16,7 +16,10 @@
     <li><%= link_to "About",welcome_about_path %></li>
     <li><%= link_to "Contact",welcome_contact_path %></li>
     <li><%= link_to "Features",welcome_features_path %></li>
-
+    <li><%= link_to "Invoices",invoices_path %></li>
+    <li><%= link_to "Companies",companies_path %></li>
+    <li><%= link_to "Employees",employees_path %></li>
+    <li><%= link_to "Purchases",purchases_path %></li>
     <% if current_user %>
       <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
       <div class='btn-group pull-right right-nav'>
